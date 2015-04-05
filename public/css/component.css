@@ -1072,6 +1072,11 @@ span.ds-thread-count:after {
 }
 
 
+.ujian-hook div{
+    border: none!important;
+}
+
+
 /*多说*/
 #ds-reset .ds-gradient-bg,
 #ds-thread #ds-reset a.ds-like-thread-button,
