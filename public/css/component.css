@@ -8,6 +8,7 @@
 
 html, body, .container, .scroller, #pjax {
     height: 100%;
+    
 }
 
 
@@ -48,6 +49,7 @@ html, body, .container, .scroller, #pjax {
 
 .mp-pusher {
     position: relative;
+    z-index: 999;
     left: 0;
     height: 100%;
 }
@@ -200,9 +202,10 @@ html, body, .container, .scroller, #pjax {
 }
 
 .mp-menu.mp-cover h2 {
-    font-weight: 700;
+    font-weight: 300;
     letter-spacing: 1px;
     font-size: 1em;
+    color: #333
 }
 
 .mp-overlap .mp-level.mp-level-overlay > h2::before {
@@ -217,7 +220,7 @@ html, body, .container, .scroller, #pjax {
 
 .mp-menu ul li > a {
     display: block;
-    padding: 0.7em 1em 0.7em 1.8em;
+    padding: 0.8em 1em 0.8em 1.8em;
     outline: none;
     box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2);
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
@@ -233,13 +236,14 @@ html, body, .container, .scroller, #pjax {
     border: none;
     outline: none;
     -webkit-appearance: none;
-    padding: 0.7em 0 0.7em 1.4em;
+    padding: 0.35em 0 0.32em 1.4em;
     background: white;
     color: #0099cc;
+    font-size: 16px;
 }
 
 #search-form {
-    height: 65px;
+    height: 44px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
     -webkit-transition: background 0.3s, box-shadow 0.3s;
@@ -252,11 +256,14 @@ html, body, .container, .scroller, #pjax {
 }
 
 div[data-level='2'] a {
-    font-size: 0.8em !important;
+    height: 44px;
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+    line-height: 44px;
 }
 
 div[data-level='1'] a {
-    font-size: 22px;
+    font-size: 17px;
     font-family: 'Open Sans', 'FontAwesome', sans-serif;
     font-weight: 500;
 }
@@ -299,7 +306,7 @@ div[data-level='1'] a {
     font-weight: 700;
     display: block;
     font-size: 0.8em;
-    padding: 1em;
+    padding:0.4em 1em;
     position: relative;
     box-shadow: inset 0 1px rgba(0, 0, 0, 0.1);
     -webkit-transition: background 0.3s;
@@ -348,7 +355,7 @@ div[data-level='1'] a {
     text-transform: none;
     font-weight: 300;
     font-family: 'Open Sans', Arial,'Microsoft YaHei', sans-serif;
-    line-height: 65px;
+    line-height: 2.75em;
     z-index: 9999;
 }
 
@@ -356,11 +363,9 @@ div[data-level='1'] a {
     position: fixed;
     top: 0;
     left: 0;
-    height: 65px;
+    height: 2.75em;
     font-size: 16px;
-    z-index: 1;
     border-bottom: 1px solid #c6d0da;
-
 }
 
 .nexus li {
@@ -411,7 +416,9 @@ div[data-level='1'] a {
 #navbar-toc i {
     color: #0099cc;
     margin-left: 10px;
-    font-weight: bold;
+}
+#navbar-toc span{
+    font-weight: 300;
 }
 
 .post-navbar {
@@ -431,7 +438,7 @@ ul#toc {
 
 #toc a {
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 300;
     display: block;
     overflow: hidden;
     padding: 0 10px;
@@ -477,7 +484,7 @@ i#scroll-up {
     border-radius: 50%;
     color: white;
     background-color: #5f6f81;
-    font-size: 40px;
+    font-size: 37px;
     display: block;
     height: 40px;
     width: 40px;
@@ -656,10 +663,12 @@ span.ds-thread-count:after {
 .inline-comment {
     width: 350px;
     position: absolute;
+    background: #fff;
     left:750px;
 }
 .post-content {
     position: relative;
+    z-index: 9;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -1064,12 +1073,13 @@ span.ds-thread-count:after {
 
 
 /*多说*/
-#ds-reset .ds-gradient-bg{
-    background: none!important;
-}
-#ds-reset .ds-gradient-bg,#ds-thread #ds-reset a.ds-like-thread-button{
+#ds-reset .ds-gradient-bg,
+#ds-thread #ds-reset a.ds-like-thread-button,
+#ds-thread #ds-reset .ds-post-button,
+#ds-thread #ds-reset .ds-textarea-wrapper,
+#ds-smilies-tooltip ul.ds-smilies-tabs li a{
     background:none!important; 
 }
-#ds-thread #ds-reset .ds-textarea-wrapper{
-    background: none!important;
+#ds-smilies-tooltip{
+    overflow: hidden;
 }
