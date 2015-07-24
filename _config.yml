@@ -70,7 +70,6 @@ deploy:
   type: github
   repo: https://github.com/denvey/denvey.github.io.git
   
-  
 plugins:
   - hexo-qiniu-sync
 #七牛云存储设置
